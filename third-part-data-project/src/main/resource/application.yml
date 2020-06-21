@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: third-part-data-project
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

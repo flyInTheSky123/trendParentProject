@@ -1,0 +1,32 @@
+# 从配置服务器中获取配置信息
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      #通过注册服务器进行 获取数据
+      discovery:
+        service-id: index-config-service
+        enabled: true
+    # 消息bus
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+    #rabbitmq
+  rabbitmq:
+    addresses: localhost
+    host: 5672
+    username: guest
+    password: guest
+
+
+
+  devtools:
+    restart:
+      log-condition-evaluation-delta=false:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
